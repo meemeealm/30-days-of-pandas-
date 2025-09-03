@@ -1,0 +1,6 @@
+import pandas as pd
+
+def big_countries(world):
+    df = pd.DataFrame(world)
+    df = df.loc[(df['area']>=3000000) | (df['population'] >= 25000000), ['name','area','population']]
+    return df
